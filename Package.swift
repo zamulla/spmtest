@@ -12,4 +12,5 @@ let package = Package(
    targets: [
       .binaryTarget(name: "shared", url: "https://github.com/zamulla/spmtest/releases/download/2/shared.xcframework.zip")
    ],
+   swiftLanguageVersions: [.v5]
 )
