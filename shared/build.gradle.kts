@@ -27,7 +27,6 @@ kotlin {
             baseName = "shared"
             isStatic = true
             xcf.add(this)
-            binaryOption("bundleId", "eu.zamulla.kmpsample.shared")
         }
     }
     
