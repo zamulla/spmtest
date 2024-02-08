@@ -24,9 +24,10 @@ kotlin {
         iosSimulatorArm64()
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
-            baseName = "Shared"
+            baseName = "shared"
             isStatic = true
             xcf.add(this)
+            binaryOption("bundleId", "eu.zamulla.kmpsample.shared")
         }
     }
     
