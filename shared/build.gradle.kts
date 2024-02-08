@@ -16,6 +16,7 @@ kotlin {
     
     jvm()
 
+    val frameworkName = "ExampleDependency"
     val xcf = XCFramework()
 
     listOf(
@@ -24,8 +25,7 @@ kotlin {
         iosSimulatorArm64()
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
-            baseName = "Shared"
-            isStatic = true
+            baseName = frameworkName
             xcf.add(this)
         }
     }
