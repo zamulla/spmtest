@@ -10,6 +10,6 @@ let package = Package(
       .library(name: "shared", targets: ["shared"])
    ],
    targets: [
-            .binaryTarget(name: "shared", url: "https://github.com/zamulla/spmtest/releases/download/3/shared.xcframework.zip",checksum:"cf37ba1310758d808e4a276aa00fee1f89173d1cc8645722f1f9ab77c5676937")
+            .binaryTarget(name: "shared", url: "https://github.com/zamulla/spmtest/releases/download/4/shared.xcframework.zip",checksum:"7c89c64a8908d9e55c8c0093ad58945c0791ae2ee281ce6264809dedf74f7cc1")
    ]
 )
