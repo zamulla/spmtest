@@ -1,6 +1,4 @@
 import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
-import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
-import org.jetbrains.kotlin.gradle.plugin.KotlinSourceSetTree
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -18,6 +16,7 @@ kotlin {
     
     jvm()
 
+    val frameworkName = "umbrella"
     val xcf = XCFramework()
 
     listOf(
@@ -26,20 +25,21 @@ kotlin {
         iosSimulatorArm64()
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
-            baseName = "shared"
+            baseName = frameworkName
             xcf.add(this)
         }
     }
-    
+
     sourceSets {
         commonMain.dependencies {
-            // put your Multiplatform dependencies here
+            api(projects.shared)
+            api(projects.sharedUi)
         }
     }
 }
 
 android {
-    namespace = "kmp.project.spmtest.shared"
+    namespace = "kmp.project.spmtest.umbrella"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
     defaultConfig {
         minSdk = libs.versions.android.minSdk.get().toInt()

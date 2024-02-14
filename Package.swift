@@ -2,14 +2,14 @@
 import PackageDescription
 
 let package = Package(
-   name: "shared",
+   name: "ExampleDependency",
    platforms: [
      .iOS(.v14),
    ],
    products: [
-      .library(name: "ExampleDependency", targets: ["ExampleDependency"])
+      .library(name: "ExampleDependency", targets: ["umbrella"])
    ],
    targets: [
-            .binaryTarget(name: "shared", url: "https://github.com/zamulla/spmtest/releases/download/5/shared.xcframework.zip",checksum:"6ad6e121869bf07e3d4fb6ccc82320c224fc971f123cc53baad997fccd70572f")
+       .binaryTarget(name: "umbrella", url: "https://github.com/zamulla/spmtest/releases/download/6/umbrella.xcframework.zip",checksum:"3c648988f81ecc60d93ff7ef5129869f246a3b5b4d8ae3bb547669363493cd14")
    ]
 )

@@ -33,6 +33,7 @@ kotlin {
             @OptIn(ExperimentalComposeLibrary::class)
             implementation(compose.components.resources)
             implementation(projects.shared)
+            implementation(projects.sharedUi)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
