@@ -1,5 +1,5 @@
-class JVMPlatform: Platform {
+class JVMPlatform: PlatformUi {
     override val name: String = "Java ${System.getProperty("java.version")}"
 }
 
-actual fun getPlatform(): Platform = JVMPlatform()
+actual fun getPlatformUi(): PlatformUi = JVMPlatform()

@@ -26,6 +26,8 @@ kotlin {
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
             baseName = frameworkName
+            export(projects.shared)
+            export(projects.sharedUi)
             xcf.add(this)
         }
     }

@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
-
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
@@ -16,8 +14,6 @@ kotlin {
     
     jvm()
 
-    val xcf = XCFramework()
-
     listOf(
         iosX64(),
         iosArm64(),
@@ -25,7 +21,7 @@ kotlin {
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
             baseName = "shared-ui"
-            xcf.add(this)
+            isStatic = true
         }
     }
     

@@ -1,5 +1,5 @@
 class UiGreeting {
-    private val platform = getPlatform()
+    private val platform = getPlatformUi()
 
     fun greet(): String {
         return "Ui, ${platform.name}!"

@@ -1,5 +1,5 @@
-interface Platform {
+interface PlatformUi {
     val name: String
 }
 
-expect fun getPlatform(): Platform
+expect fun getPlatformUi(): PlatformUi
