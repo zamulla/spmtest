@@ -16,7 +16,7 @@ kotlin {
     
     jvm()
 
-    val frameworkName = "umbrella"
+    val frameworkName = "together"
     val xcf = XCFramework()
 
     listOf(
@@ -41,7 +41,7 @@ kotlin {
 }
 
 android {
-    namespace = "kmp.project.spmtest.umbrella"
+    namespace = "kmp.project.spmtest.together"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
     defaultConfig {
         minSdk = libs.versions.android.minSdk.get().toInt()

@@ -18,7 +18,7 @@ dependencyResolutionManagement {
     }
 }
 
-include(":umbrella")
+include(":together")
 include(":composeApp")
 include(":shared")
 include(":shared-ui")
